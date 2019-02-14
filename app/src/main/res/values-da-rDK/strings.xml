@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Android Kotlin Intro</string>
+    <string name="greeting_label">Hej verden!</string>
+    <string name="some_text">Et eller andet</string>
+    <string name="number_1_text">1</string>
+    <string name="number_0_text">0</string>
+    <string name="title_activity_calculator">Regnemaskine</string>
+    <string name="store_text">GEM</string>
+    <string name="recall_text">HNT</string>
+    <string name="clear_text">TØM</string>
+    <string name="enter_text">INDSÆT</string>
+    <string name="number_7_text">7</string>
+    <string name="number_8_text">8</string>
+    <string name="number_9_text">9</string>
+    <string name="number_4_text">4</string>
+    <string name="number_5_text">5</string>
+    <string name="number_6_text">6</string>
+    <string name="number_2_text">2</string>
+    <string name="number_3_text">3</string>
+</resources>

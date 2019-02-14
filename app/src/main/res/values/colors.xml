@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="operator_text_color">#C0C0B0</color>
+    <color name="lcd_text_color">#E1FF00</color>
+    <color name="calculator_color">#AAAAAA</color>
+</resources>

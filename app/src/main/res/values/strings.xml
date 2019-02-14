@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">AndroidKotlinIntro</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="greeting_label">Hello World!</string>
+    <string name="some_text">Some text goes here</string>
+    <string name="title_activity_calculator">Calculator</string>
+    <string name="button_4_text" translatable="false">4</string>
+    <string name="button_recall_text" translatable="false">RCL</string>
+    <string name="button_enter_text" translatable="false">ENTER</string>
+    <string name="clear_text">CLR</string>
+    <string name="number_7_text">7</string>
+    <string name="number_8_text">8</string>
+    <string name="number_9_text">9</string>
+    <string name="div_text" translatable="false">÷</string>
+    <string name="store_text">STO</string>
+    <string name="recall_text">RCL</string>
+    <string name="number_4_text">4</string>
+    <string name="number_5_text">5</string>
+    <string name="number_6_text">6</string>
+    <string name="times_text" translatable="false">×</string>
+    <string name="undo_text" translatable="false"><![CDATA[↶]]></string>
+    <string name="number_1_text">1</string>
+    <string name="number_2_text">2</string>
+    <string name="number_3_text">3</string>
+    <string name="minus_text" translatable="false">−</string>
+    <string name="number_0_text">0</string>
+    <string name="enter_text">ENTER</string>
+    <string name="plus_text" translatable="false">+</string>
+</resources>

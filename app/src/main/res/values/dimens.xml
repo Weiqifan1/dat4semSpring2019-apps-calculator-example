@@ -1,0 +1,8 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="command_text_size">10pt</dimen>
+    <dimen name="digit_text_size">16pt</dimen>
+    <dimen name="lcd_padding">10dp</dimen>
+    <dimen name="lcd_text_size">16pt</dimen>
+
+</resources>

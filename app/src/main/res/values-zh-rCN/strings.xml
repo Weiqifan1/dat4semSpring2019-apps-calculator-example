@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="number_1_text">一</string>
+    <string name="app_name">AndroidKotlinIntro</string>
+    <string name="number_2_text">二</string>
+    <string name="number_3_text">三</string>
+    <string name="number_4_text">四</string>
+    <string name="number_5_text">五</string>
+    <string name="number_6_text">六</string>
+    <string name="number_7_text">七</string>
+    <string name="number_8_text">八</string>
+    <string name="number_9_text">九</string>
+    <string name="number_0_text">零</string>
+    <string name="enter_text">输入</string>
+    <string name="store_text">蓄</string>
+    <string name="recall_text">"记得 "</string>
+    <string name="clear_text">湔</string>
+    <string name="title_activity_calculator">计算器</string>
+    <string name="greeting_label">你好，世界</string>
+    <string name="some_text">有些文字在这里</string>
+</resources>
