@@ -8,13 +8,73 @@
         tools:context=".Calculator9Activity"
         android:id="@+id/keypad" android:background="@color/calculator_color">
 
+    <LinearLayout
+            android:id="@+id/display"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/lcd"
+            app:layout_constraintStart_toStartOf="@+id/clear_button"
+            app:layout_constraintEnd_toEndOf="@+id/div_button"
+            android:layout_marginTop="16dp">
+        <TextView
+                android:id="@+id/stack_t_view"
+                android:text="355/113"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lcd"
+                android:textSize="@dimen/lcd_text_size"
+                android:textAlignment="textEnd"
+                android:textColor="@color/lcd_text_color"
+                android:paddingHorizontal="@dimen/lcd_padding"
+                android:paddingVertical="@dimen/lcd_padding"
+        />
+        <TextView
+                android:id="@+id/stack_z_view"
+                android:text="355/113"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lcd"
+                android:textSize="@dimen/lcd_text_size"
+                android:textAlignment="textEnd"
+                android:textColor="@color/lcd_text_color"
+                android:paddingHorizontal="@dimen/lcd_padding"
+                android:paddingVertical="@dimen/lcd_padding"
+        />
+        <TextView
+                android:id="@+id/stack_y_view"
+                android:text="355/113"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lcd"
+                android:textSize="@dimen/lcd_text_size"
+                android:textAlignment="textEnd"
+                android:textColor="@color/lcd_text_color"
+                android:paddingHorizontal="@dimen/lcd_padding"
+                android:paddingVertical="@dimen/lcd_padding"
+        />
+        <TextView
+                android:id="@+id/stack_x_view"
+                android:text="355/113"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lcd"
+                android:textSize="@dimen/lcd_text_size"
+                android:textAlignment="textEnd"
+                android:textColor="@color/lcd_text_color"
+                android:paddingHorizontal="@dimen/lcd_padding"
+                android:paddingVertical="@dimen/lcd_padding"
+        />
+    </LinearLayout>
     <Button
             android:text="@string/clear_text"
             android:id="@+id/clear_button"
             style="@style/CalculatorKey"
+            app:layout_constraintTop_toBottomOf="@id/display"
             app:layout_constraintEnd_toStartOf="@+id/number_7_button"
             app:layout_constraintHorizontal_chainStyle="packed" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/stack_x_view"/>
+            android:layout_marginTop="16dp"/>
     <Button
             android:id="@+id/number_7_button"
             style="@style/CalculatorKey.Digit"
@@ -116,15 +176,5 @@
             android:id="@+id/plus_button" style="@style/CalculatorKey.Operator"
             app:layout_constraintStart_toEndOf="@+id/enter_button"
             app:layout_constraintTop_toBottomOf="@+id/minus_button"/>
-    <TextView
-            android:text="TextView"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/stack_x_view" android:layout_marginTop="16dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="@+id/clear_button"
-            app:layout_constraintEnd_toEndOf="@+id/div_button" android:fontFamily="@font/lcd"
-            android:textSize="@dimen/lcd_text_size" android:textAlignment="textEnd"
-            android:background="@drawable/lcd"
-            android:textColor="@color/lcd_text_color" android:paddingHorizontal="@dimen/lcd_padding"
-            android:paddingVertical="@dimen/lcd_padding"/>
+
 </android.support.constraint.ConstraintLayout>
