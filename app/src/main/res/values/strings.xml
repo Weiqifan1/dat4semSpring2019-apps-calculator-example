@@ -26,4 +26,10 @@
     <string name="number_0_text">0</string>
     <string name="enter_text">ENTER</string>
     <string name="plus_text" translatable="false">+</string>
+    <string name="change_sign_text">CHS</string>
+    <string name="inverse_text">1/𝑥</string>
+    <string name="roll_down_text">R↓</string>
+    <string name="swap_text">𝑥⇄𝑦</string>
+    <string name="clear_x_text">CL𝑥</string>
+    <string name="option_text">OPT</string>
 </resources>

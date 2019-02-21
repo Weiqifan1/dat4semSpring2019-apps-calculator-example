@@ -13,17 +13,16 @@
             android:orientation="vertical"
             android:layout_height="wrap_content"
             android:layout_width="0dp"
-            app:layout_constraintTop_toTopOf="parent"
             android:background="@drawable/lcd"
-            app:layout_constraintStart_toStartOf="@+id/clear_button"
-            app:layout_constraintEnd_toEndOf="@+id/div_button"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/clear_x_button"
+            app:layout_constraintStart_toStartOf="@+id/store_button">
         <TextView
                 android:id="@+id/stack_t_view"
                 android:text="355/113"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/lcd"
+                android:fontFamily="@font/hp_41_c"
                 android:textSize="@dimen/lcd_text_size"
                 android:textAlignment="textEnd"
                 android:textColor="@color/lcd_text_color"
@@ -35,7 +34,7 @@
                 android:text="355/113"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/lcd"
+                android:fontFamily="@font/hp_41_c"
                 android:textSize="@dimen/lcd_text_size"
                 android:textAlignment="textEnd"
                 android:textColor="@color/lcd_text_color"
@@ -47,7 +46,7 @@
                 android:text="355/113"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/lcd"
+                android:fontFamily="@font/hp_41_c"
                 android:textSize="@dimen/lcd_text_size"
                 android:textAlignment="textEnd"
                 android:textColor="@color/lcd_text_color"
@@ -59,7 +58,7 @@
                 android:text="355/113"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/lcd"
+                android:fontFamily="@font/hp_41_c"
                 android:textSize="@dimen/lcd_text_size"
                 android:textAlignment="textEnd"
                 android:textColor="@color/lcd_text_color"
@@ -68,113 +67,159 @@
         />
     </LinearLayout>
     <Button
-            android:text="@string/clear_text"
-            android:id="@+id/clear_button"
+            android:text="@string/store_text"
+            android:id="@+id/store_button"
             style="@style/CalculatorKey"
-            app:layout_constraintTop_toBottomOf="@id/display"
-            app:layout_constraintEnd_toStartOf="@+id/number_7_button"
-            app:layout_constraintHorizontal_chainStyle="packed" app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginTop="16dp"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/recall_button"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toTopOf="@+id/recall_button"/>
+    <Button
+            android:text="@string/recall_text"
+            android:id="@+id/recall_button" style="@style/CalculatorKey"
+            android:fontFamily="sans-serif-medium"
+            app:layout_constraintStart_toEndOf="@+id/store_button" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/inverse_button"
+            app:layout_constraintTop_toTopOf="@+id/inverse_button"/>
+    <Button
+            android:text="@string/change_sign_text"
+            android:id="@+id/change_sign_button"
+            style="@style/CalculatorKey"
+            app:layout_constraintStart_toEndOf="@+id/inverse_button" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/clear_x_button"
+            app:layout_constraintTop_toTopOf="@+id/clear_x_button"/>
+    <Button
+            android:text="@string/inverse_text"
+            android:id="@+id/inverse_button" style="@style/CalculatorKey"
+            app:layout_constraintTop_toTopOf="@+id/change_sign_button"
+            app:layout_constraintStart_toEndOf="@+id/recall_button" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/change_sign_button"/>
+    <Button
+            android:text="@string/clear_x_text"
+            android:id="@+id/clear_x_button" style="@style/CalculatorKey"
+            app:layout_constraintStart_toEndOf="@+id/change_sign_button"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/display"/>
+
     <Button
             android:id="@+id/number_7_button"
             style="@style/CalculatorKey.Digit"
             android:text="@string/number_7_text"
-            app:layout_constraintStart_toEndOf="@+id/clear_button"
-            app:layout_constraintEnd_toStartOf="@id/number_8_button"
-            app:layout_constraintTop_toTopOf="@+id/clear_button"/>
+            app:layout_constraintStart_toEndOf="@+id/swap_button" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/number_8_button"
+            app:layout_constraintTop_toTopOf="@+id/number_8_button"/>
     <Button
             android:text="@string/number_8_text"
             android:id="@+id/number_8_button"
             style="@style/CalculatorKey.Digit"
-            app:layout_constraintStart_toEndOf="@+id/number_7_button"
-            app:layout_constraintTop_toTopOf="@+id/number_7_button"
+            app:layout_constraintStart_toEndOf="@+id/number_7_button" app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintEnd_toStartOf="@+id/number_9_button"
-    />
+            app:layout_constraintTop_toTopOf="@+id/number_9_button"/>
     <Button
             android:text="@string/number_9_text"
             android:id="@+id/number_9_button"
             style="@style/CalculatorKey.Digit"
+            app:layout_constraintEnd_toStartOf="@+id/div_button"
             app:layout_constraintStart_toEndOf="@+id/number_8_button"
-            app:layout_constraintTop_toTopOf="@+id/number_8_button"
-            app:layout_constraintEnd_toStartOf="@id/div_button"
-    />
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintTop_toTopOf="@+id/div_button"/>
     <Button
             android:text="@string/div_text"
             android:id="@+id/div_button" style="@style/CalculatorKey.Operator"
-            app:layout_constraintStart_toEndOf="@+id/number_9_button"
-            app:layout_constraintTop_toTopOf="@+id/number_9_button"
-            app:layout_constraintEnd_toEndOf="parent"/>
-    <Button
-            android:text="@string/store_text"
-            android:id="@+id/store_button" style="@style/CalculatorKey"
-            app:layout_constraintStart_toStartOf="@+id/clear_button"
-            app:layout_constraintTop_toBottomOf="@+id/clear_button"/>
-    <Button
-            android:text="@string/recall_text"
-            android:id="@+id/recall_button" style="@style/CalculatorKey"
-            app:layout_constraintStart_toStartOf="@+id/store_button"
-            app:layout_constraintTop_toBottomOf="@+id/store_button"/>
+            app:layout_constraintEnd_toEndOf="@+id/clear_x_button"
+            app:layout_constraintStart_toEndOf="@+id/number_9_button" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@+id/clear_x_button"/>
     <Button
             android:text="@string/number_4_text"
             android:id="@+id/number_4_button" style="@style/CalculatorKey.Digit"
-            app:layout_constraintTop_toBottomOf="@+id/number_7_button"
-            app:layout_constraintStart_toEndOf="@+id/store_button"/>
+            app:layout_constraintStart_toEndOf="@+id/roll_down_button" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/number_5_button"
+            app:layout_constraintTop_toTopOf="@+id/number_5_button"/>
     <Button
             android:text="@string/number_5_text"
             android:id="@+id/number_5_button" style="@style/CalculatorKey.Digit"
-            app:layout_constraintTop_toBottomOf="@+id/number_8_button"
-            app:layout_constraintStart_toEndOf="@+id/number_4_button"/>
+            app:layout_constraintStart_toEndOf="@+id/number_4_button" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/number_6_button"
+            app:layout_constraintTop_toTopOf="@+id/number_6_button"/>
     <Button
             android:text="@string/number_6_text"
             android:id="@+id/number_6_button"
-            app:layout_constraintTop_toBottomOf="@+id/number_9_button"
-            app:layout_constraintStart_toEndOf="@+id/number_5_button" style="@style/CalculatorKey.Digit"/>
+            style="@style/CalculatorKey.Digit"
+            app:layout_constraintStart_toEndOf="@+id/number_5_button"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/times_button"
+            app:layout_constraintTop_toTopOf="@+id/times_button"/>
     <Button
             android:text="@string/times_text"
             android:id="@+id/times_button" style="@style/CalculatorKey.Operator"
-            app:layout_constraintTop_toBottomOf="@+id/div_button"
-            app:layout_constraintStart_toEndOf="@+id/number_6_button"/>
-    <Button
-            android:text="@string/undo_text"
-            android:id="@+id/undo_button" style="@style/CalculatorKey"
-            app:layout_constraintTop_toBottomOf="@+id/recall_button"
-            app:layout_constraintStart_toStartOf="@+id/recall_button" android:textSize="16pt"
-            android:fontFamily="sans-serif-black"/>
+            app:layout_constraintStart_toEndOf="@+id/number_6_button"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/div_button"/>
     <Button
             android:text="@string/number_1_text"
             android:id="@+id/number_1_button" style="@style/CalculatorKey.Digit"
-            app:layout_constraintTop_toBottomOf="@+id/number_4_button"
-            app:layout_constraintStart_toEndOf="@+id/recall_button"/>
+            app:layout_constraintStart_toEndOf="@+id/undo_button" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/number_2_button"
+            app:layout_constraintTop_toTopOf="@+id/number_2_button"/>
     <Button
             android:text="@string/number_2_text"
             android:id="@+id/number_2_button" style="@style/CalculatorKey.Digit"
-            app:layout_constraintTop_toBottomOf="@+id/number_5_button"
-            app:layout_constraintStart_toEndOf="@+id/number_1_button"/>
+            app:layout_constraintStart_toEndOf="@+id/number_1_button" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/number_3_button"
+            app:layout_constraintTop_toTopOf="@+id/number_3_button"/>
     <Button
             android:text="@string/number_3_text"
             android:id="@+id/number_3_button" style="@style/CalculatorKey.Digit"
-            app:layout_constraintTop_toBottomOf="@+id/number_6_button"
-            app:layout_constraintStart_toEndOf="@+id/number_2_button"/>
+            app:layout_constraintStart_toEndOf="@+id/number_2_button" app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toStartOf="@+id/plus_button" app:layout_constraintTop_toTopOf="@+id/plus_button"/>
     <Button
             android:text="@string/minus_text"
             android:id="@+id/minus_button" style="@style/CalculatorKey.Operator"
-            app:layout_constraintTop_toBottomOf="@+id/times_button"
-            app:layout_constraintStart_toEndOf="@+id/number_3_button"/>
+            app:layout_constraintStart_toEndOf="@+id/enter_button"
+            app:layout_constraintTop_toBottomOf="@+id/plus_button"/>
     <Button
             android:text="@string/number_0_text"
             android:id="@+id/number_0_button" style="@style/CalculatorKey.Digit"
-            app:layout_constraintStart_toEndOf="@+id/undo_button"
+            app:layout_constraintEnd_toStartOf="@+id/enter_button"
             app:layout_constraintTop_toBottomOf="@+id/number_1_button"/>
     <Button
             android:text="@string/enter_text"
             android:id="@+id/enter_button" style="@style/CalculatorKey"
-            app:layout_constraintStart_toEndOf="@+id/number_0_button"
             app:layout_constraintEnd_toEndOf="@+id/number_3_button"
-            app:layout_constraintTop_toBottomOf="@+id/number_2_button" android:layout_width="0dp"/>
+            app:layout_constraintStart_toStartOf="@+id/number_2_button"
+            android:layout_width="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/number_2_button" android:onClick="doEnter"/>
     <Button
             android:text="@string/plus_text"
             android:id="@+id/plus_button" style="@style/CalculatorKey.Operator"
-            app:layout_constraintStart_toEndOf="@+id/enter_button"
-            app:layout_constraintTop_toBottomOf="@+id/minus_button"/>
+            app:layout_constraintStart_toEndOf="@+id/number_3_button"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/times_button"/>
+    <Button
+            android:text="@string/roll_down_text"
+            android:id="@+id/roll_down_button" style="@style/CalculatorKey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/number_4_button"
+            app:layout_constraintTop_toTopOf="@+id/number_4_button"
+            app:layout_constraintHorizontal_chainStyle="packed"/>
+    <Button
+            android:text="@string/swap_text"
+            android:id="@+id/swap_button" style="@style/CalculatorKey"
+            app:layout_constraintStart_toStartOf="@+id/store_button"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/number_7_button"
+            app:layout_constraintTop_toTopOf="@+id/number_7_button"
+            app:layout_constraintHorizontal_chainStyle="packed"/>
+    <Button
+            android:text="@string/undo_text"
+            android:id="@+id/undo_button" style="@style/CalculatorKey"
+            android:textSize="16pt" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5" app:layout_constraintEnd_toStartOf="@+id/number_1_button"
+            app:layout_constraintTop_toTopOf="@+id/number_1_button"
+            app:layout_constraintHorizontal_chainStyle="packed"/>
+    <Button
+            android:text="@string/option_text"
+            android:id="@+id/option_button" style="@style/CalculatorKey"
+            app:layout_constraintEnd_toStartOf="@+id/number_0_button"
+            app:layout_constraintTop_toBottomOf="@+id/undo_button"/>
+
 
 </android.support.constraint.ConstraintLayout>

@@ -18,9 +18,11 @@
         <item name="android:layout_height">84dp</item>
         <item name="android:layout_width">80dp</item>
         <item name="android:textSize">@dimen/command_text_size</item>
+        <item name="android:onClick">doOperation</item>
     </style>
     <style name="CalculatorKey.Digit" parent="CalculatorKey">
         <item name="android:textSize">@dimen/digit_text_size</item>
+        <item name="android:onClick">doDigit</item>
     </style>
     <style name="CalculatorKey.Operator" parent="CalculatorKey">
         <item name="android:textSize">@dimen/digit_text_size</item>
